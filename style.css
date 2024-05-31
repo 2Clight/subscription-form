@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+:root{
+  --clr-primary-tomato:hsl(4, 100%, 67%);
+  --clr-primary-red:hsl(0, 87%, 48%);
+  --clr-neutral-darkgrey:hsl(234, 29%, 20%);
+  --clr-neutral-midgrey:hsl(235, 18%, 26%);
+  --clr-neutral-lightgrey:hsl(231, 7%, 60%);
+  --clr-neutral-white:hsl(0, 0%, 100%);
+
+
+  --clr-gradient: linear-gradient(to right, var(--clr-primary-red), var(--clr-primary-tomato));
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+*:focus {
+  outline: none;
+}
+.attribution{
+  display: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--clr-neutral-darkgrey);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+.container{
+    
+    margin:0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--clr-neutral-white);
+}
+
+.confirmation{
+  width: 100vw;
+  
+  
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+  gap:2rem;
+  padding: 0 2rem;
+  background-color: var(--clr-neutral-white);
+}
+.words{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+ 
+}
+.confirmation_icon{
+  width:4rem;
+  height: 4rem;
+}
+
+.dismiss_btn{
+  align-self: flex-end;
+  width: 100%;
+  
+  
+  
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  padding: 1rem;
+}
+
+.img{
+    width:100%;
+    object-fit: cover;
+    
+    height: auto;
+    display: block;
+        
+}
+.intro_text{
+  margin-bottom: .7rem;
+}
+
+.checks > *{
+  padding-bottom: .5rem;
+}
+.row{
+  display: flex;
+  
+}
+.col{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.email_input{
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+.email{
+  padding: 1rem;
+  width: 100%;
+  border-radius: .5rem;
+  outline: none;
+  
+  border: 2px solid var(--clr-neutral-lightgrey);
+}
+
+.subscribe_btn, .dismiss_btn{
+  width:100%;
+  padding: .7rem;
+  background-color: var(--clr-neutral-midgrey);
+  color:var(--clr-neutral-white);
+  font-weight: 600;
+  font-size: 1.01rem;
+  border-radius: .5rem;
+  border: none;
+
+}
+.subscribe_btn:hover,.dismiss_btn:hover {
+  background:var(--clr-gradient);
+  cursor: pointer;
+}
+.error_message{
+  color:red;
+  display: none;
+}
+.hidden{
+    display:none;
+}
+@media(min-width:50em){
+  .container{
+    margin: 9rem auto;
+    max-width: 45rem;
+    padding: 1.3rem;
+    flex-direction: row;
+    border-radius: 1rem;
+    
+  }
+  .content{
+    margin-right: 2rem;
+  }
+  h1{
+    font-size: 2.25rem;
+  }
+  .img{
+    height: 100%;
+    border-radius: .7rem;
+  }
+  .confirmation{
+    margin: 9rem auto;
+    height:auto;
+    max-width: 25rem;
+    padding: 1.3rem;
+    
+    border-radius: 1rem;
+    
+  }
+  .attribution{
+    display: block;
+  }
+}

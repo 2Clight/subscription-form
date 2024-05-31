@@ -158,7 +158,7 @@ a:not([class]) {
   background-color: var(--clr-neutral-midgrey);
   color:var(--clr-neutral-white);
   font-weight: 600;
-  font-size: 1.01rem;
+  
   border-radius: .5rem;
   border: none;
 
@@ -176,8 +176,8 @@ a:not([class]) {
 }
 @media(min-width:50em){
   .container{
-    margin: 9rem auto;
-    max-width: 45rem;
+    margin: 12rem auto;
+    max-width: 50rem;
     padding: 1.3rem;
     flex-direction: row;
     border-radius: 1rem;
